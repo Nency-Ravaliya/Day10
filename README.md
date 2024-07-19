@@ -19,8 +19,9 @@ docker push nensiravaliya28/day10:v2
 
 ## 2. Start Minikube
 
-minikube start --addons=ingress
+```minikube start --addons=ingress
 minikube status
+```
 
 ## 3. Apply Kubernetes Configurations
 
