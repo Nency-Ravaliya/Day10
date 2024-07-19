@@ -1,4 +1,4 @@
-# Application Deployment with Kubernetes and Minikube
+![image](https://github.com/user-attachments/assets/613df24d-bfe2-45fa-881c-3ffa62cf7ed5)# Application Deployment with Kubernetes and Minikube
 
 This guide provides a step-by-step walkthrough for deploying a web application using Docker and Minikube. It includes setting up SSL certificates, configuring ingress, and performing load testing.
 
@@ -71,6 +71,10 @@ curl http://host1example.com/app2
 curl http://host2example.com/app1
 
 ```
+![image](https://github.com/user-attachments/assets/0b2a38dc-4f57-42b9-b06c-39fff8af451b)
+![image](https://github.com/user-attachments/assets/91e62d71-5cda-4d0d-b51d-e93bf6afb6da)
+![image](https://github.com/user-attachments/assets/42c043c6-0c35-4348-ad10-000a3847cd01)
+
 ## 7. Load Testing
 Set up Horizontal Pod Autoscaler (HPA):
 
@@ -86,8 +90,11 @@ kubectl get hpa static-web-app --watch
 ```
 ## 8. Verify SSL HTTPS Connection
 ```
-curl -I http://my-self-signed-domain.com/
+ curl my-self-signed-domain.com -L -k
+
 ```
+![image](https://github.com/user-attachments/assets/4bf1b0e4-0040-4e84-b38b-c257d0ab9dc0)
+
 
 ## 9. Open your browser and go to:
 
