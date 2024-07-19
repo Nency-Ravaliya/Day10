@@ -80,7 +80,7 @@ Set up Horizontal Pod Autoscaler (HPA):
 
 You can also generate you hpa.yaml file:
 ```
-kubectl get hpa php-apache -o yaml > hpa-v2.yaml #generate the hpa-v2.yaml file in your current directory.
+kubectl get hpa static-web-app -o yaml > hpa-v2.yaml #generate the hpa-v2.yaml file in your current directory.
 ```
 Add the autoscalling and test it:
 ```
@@ -88,6 +88,9 @@ kubectl autoscale deployment static-web-app --cpu-percent=50 --min=1 --max=10
 kubectl get hpa
 kubectl get hpa static-web-app --watch
 ```
+
+![image](https://github.com/user-attachments/assets/31031a94-2b36-45df-83aa-45b51cf773cd)
+
 ## 8. Verify SSL HTTPS Connection
 ```
  curl my-self-signed-domain.com -L -k
