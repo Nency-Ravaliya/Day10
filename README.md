@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/613df24d-bfe2-45fa-881c-3ffa62cf7ed5)# Application Deployment with Kubernetes and Minikube
+# Application Deployment with Kubernetes and Minikube
 
 This guide provides a step-by-step walkthrough for deploying a web application using Docker and Minikube. It includes setting up SSL certificates, configuring ingress, and performing load testing.
 
