@@ -39,10 +39,11 @@ sudo nano /etc/hosts
 ```
 Add the following line:
 ```
-<minikube-ip> my-self-signed-domain.com
+<minikube-ip> my-self-signed-domain.com  # Add your domain name here
 ```
 
 ## 5. Create and Configure SSL Certificates
+### It is a self-signed certificate. You can generate certificates for free.
 
 ```
 openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
@@ -65,11 +66,21 @@ kubectl apply -f ingress-resource.yaml
 ### Verify HTTPS connection:
 ```
 curl -v https://my-self-signed-domain.com -k
+curl http://host1example.com/app1
+curl http://host1example.com/app2
+curl http://host2example.com/app1
+
 ```
 ## 7. Load Testing
 Set up Horizontal Pod Autoscaler (HPA):
+
+You can also generate you hpa.yaml file:
 ```
-kubectl autoscale deployment static-web-app --cpu-percent=50 --min=1 --max=10
+kubectl get hpa php-apache -o yaml > hpa-v2.yaml #generate the hpa-v2.yaml file in your current directory.
+```
+Add the autoscalling and test it:
+```
+kubectl autoscale deployment static-web-app --cpu-percent=50 --min=1 --max=10 
 kubectl get hpa
 kubectl get hpa static-web-app --watch
 ```
@@ -83,6 +94,8 @@ curl -I http://my-self-signed-domain.com/
 ```
 https://my-self-signed-domain.com
 ```
+![image](https://github.com/user-attachments/assets/ed279e89-d648-4f44-9980-81ba1656ee71)
+
 
 
 
