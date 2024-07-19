@@ -16,7 +16,7 @@ Build the Docker image and push it to your Docker registry:
 docker build -t nensiravaliya28/day10:v2 .
 docker push nensiravaliya28/day10:v2
 
-##2. Start Minikube
+## 2. Start Minikube
 
 minikube start --addons=ingress
 minikube status
