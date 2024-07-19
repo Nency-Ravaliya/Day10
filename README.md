@@ -1,6 +1,6 @@
 # Application Deployment with Kubernetes and Minikube
 
-This guide provides a step-by-step walkthrough for deploying a web application using Docker, Minikube, and Kubernetes. It includes setting up SSL certificates, configuring ingress, and performing load testing.
+This guide provides a step-by-step walkthrough for deploying a web application using Docker and Minikube. It includes setting up SSL certificates, configuring ingress, and performing load testing.
 
 ## Prerequisites
 
@@ -13,8 +13,8 @@ This guide provides a step-by-step walkthrough for deploying a web application u
 Build the Docker image and push it to your Docker registry:
 
 ```bash
-docker build -t nensiravaliya28/day10:v2 .
-docker push nensiravaliya28/day10:v2
+docker build -t nensiravaliya28/day10:v2 .  ##build your own docker image for your static website
+docker push nensiravaliya28/day10:v2        ##push that image to docker hub
 ```
 
 ## 2. Start Minikube
