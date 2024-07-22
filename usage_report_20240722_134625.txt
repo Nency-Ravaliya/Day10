@@ -1,0 +1,47 @@
+
+=== System Usage Report ===
+Timestamp: 2024-07-22 13:46:24
+CPU Usage: 8.2%
+Memory Usage: 42.998%
+Disk Usage: 30% on /
+
+Network Statistics: Total: 1479
+TCP:   17 (estab 2, closed 2, orphaned 0, timewait 0)
+
+Transport Total     IP        IPv6
+RAW	  1         0         1        
+UDP	  15        12        3        
+TCP	  15        8         7        
+INET	  31        20        11       
+FRAG	  0         0         0        
+
+Top Processes: 
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  99944 einfoch+  20   0   13356   4224   3328 R  12.5   0.0   0:00.03 top
+   1204 root      20   0  931304  29312  23424 S   6.2   0.2   0:09.74 TaniumCX
+   1423 root      20   0 2076284  47252  24168 S   6.2   0.3   0:08.57 TaniumCX
+      1 root      20   0  168640  13256   8136 S   0.0   0.1   0:24.73 systemd
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.03 kthreadd
+
+=== Recent Log Entries ===
+Jul 22 13:46:09 AHMLPT1719 teams-for-linux_teams-for-linux.desktop[15486]: [15486:0722/134609.122089:ERROR:ssl_client_socket_impl.cc(879)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 22 13:46:09 AHMLPT1719 teams-for-linux_teams-for-linux.desktop[15344]: [ERROR] An unexpected SSL error has occurred: net::ERR_CERT_COMMON_NAME_INVALID
+Jul 22 13:46:10 AHMLPT1719 google-chrome.desktop[14881]: [14875:14902:0722/134610.749113:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -118
+Jul 22 13:46:11 AHMLPT1719 kubelet.daemon[99788]: E0722 13:46:11.779801   99788 run.go:74] "command failed" err="failed to run Kubelet: validate service connection: validate CRI v1 runtime API for endpoint \"unix:///run/containerd/containerd.sock\": rpc error: code = Unimplemented desc = unknown service runtime.v1.RuntimeService"
+Jul 22 13:46:16 AHMLPT1719 kubelet.daemon[99824]: E0722 13:46:16.002642   99824 run.go:74] "command failed" err="failed to run Kubelet: validate service connection: validate CRI v1 runtime API for endpoint \"unix:///run/containerd/containerd.sock\": rpc error: code = Unimplemented desc = unknown service runtime.v1.RuntimeService"
+Jul 22 13:46:19 AHMLPT1719 google-chrome.desktop[14881]: [14922:14927:0722/134619.926287:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 22 13:46:20 AHMLPT1719 kubelet.daemon[99858]: E0722 13:46:20.327663   99858 run.go:74] "command failed" err="failed to run Kubelet: validate service connection: validate CRI v1 runtime API for endpoint \"unix:///run/containerd/containerd.sock\": rpc error: code = Unimplemented desc = unknown service runtime.v1.RuntimeService"
+Jul 22 13:46:21 AHMLPT1719 google-chrome.desktop[14881]: [14922:14927:0722/134621.921168:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 22 13:46:21 AHMLPT1719 google-chrome.desktop[14881]: [14922:14927:0722/134621.939377:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 22 13:46:24 AHMLPT1719 kubelet.daemon[99895]: E0722 13:46:24.552058   99895 run.go:74] "command failed" err="failed to run Kubelet: validate service connection: validate CRI v1 runtime API for endpoint \"unix:///run/containerd/containerd.sock\": rpc error: code = Unimplemented desc = unknown service runtime.v1.RuntimeService"
+
+=== Health Checks ===
+Apache Status: active
+MySQL Status: inactive
+External Service (example.com) Status: HTTP 200
+
+=== CPU Usage Graph ===
+![CPU Usage Graph](cpu_usage.png)
+
+=== Memory Usage Graph ===
+![Memory Usage Graph](memory_usage.png)

@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: static-web-app
-          image: nensiravaliya28/day10:v2
+          image: ubuntu/apache2:latest
           ports:
             - containerPort: 80
           resources:
